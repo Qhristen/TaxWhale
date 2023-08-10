@@ -6,7 +6,7 @@ import AccountHistory from "../molecules/accountHistory";
 
 const SidebarRight = () => {
   return (
-    <div className="md:p-4">
+    <div className="p-4">
       <div className="flex gap-2 pt-3 whitespace-nowrap ">
         <Button icon={`images/plus.svg`}> Add Account</Button>
         <Button icon={`images/fluent_signature-16-regular.svg`}> Request Tax Pro</Button>

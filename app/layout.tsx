@@ -1,4 +1,3 @@
-"use client"
 
 import Sidebar from "@/components/organisms/sidebarLeft";
 import "./globals.css";
@@ -6,8 +5,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Header from "@/components/molecules/header";
 import SidebarRight from "@/components/organisms/sidebarRight";
-import DashboardCards from "@/components/molecules/dashboardCards";
-import { useState } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,14 +21,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [collapsed, setSidebarCollapsed] = useState(true);
   return (
     <html lang="en">
       <body className={poppins.className}>
         <div className="flex md:justify-evenly lg:justify-stretch m-0 gap-0">
           <Sidebar
-            collapsed={collapsed}
-            setCollapsed={() => setSidebarCollapsed((prev) => !prev)}
+    
           />
           <div className="w-[80%] lg:flex-grow pt-3">
             <Header />
